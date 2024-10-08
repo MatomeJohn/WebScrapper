@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechCrunch Scraper</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .article { margin-bottom: 20px; }
+        .article-title { font-size: 18px; font-weight: bold; }
+        .article-link { color: blue; text-decoration: none; }
+        .article-date { font-size: 12px; color: gray; }
+    </style>
+</head>
+<body>
+    <h1>TechCrunch Articles</h1>
+    <div>
+        {% for article in articles %}
+        <div class="article">
+            <div class="article-title">{{ article.title }}</div>
+            <a class="article-link" href="{{ article.link }}" target="_blank">Read More</a>
+            <div class="article-date">Published on: {{ article.date }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
